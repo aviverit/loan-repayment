@@ -22,6 +22,7 @@ namespace LoanRepayment{
     }
 
     class StudentLoan : Loan {
+        private string name;
         private DateTime startDate;
         private DateTime endDate;
         private double principle;
@@ -47,6 +48,7 @@ namespace LoanRepayment{
         {
             this.amount = a;
         }
+
         public override void setInterestRate(double iR)
         {
             this.interestRate = iR;
@@ -272,7 +274,7 @@ namespace LoanRepayment{
                 Console.WriteLine("Specify the start date (yyyy/mm/dd) for loan repayment: ");
                 startDate = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Do you have another Loan to enter? (y/n)");
-                cont = Console.ReadLine();
+                cont = Console.ReadLine();                
             }
         }
     }
